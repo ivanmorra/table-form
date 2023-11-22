@@ -1,6 +1,7 @@
 <h1 class="text-success">Table</h1>
  
 <h4 class="mt-5">Tabella Utenti</h4>
+<button (click)="apriModaleInserimento()"> NUOVO UTENTE</button>
 <table>
   <tr>
     <th>NOME</th>
@@ -32,6 +33,16 @@
         <strong>Nome:</strong>  {{dettaglioUtente.nome}}
       </li>
     </ul>
+
+  </div>
+</ng-template>
+<ng-template #modalInserimento>
+  <div>
+    <h5>NUOVO UTENTE</h5> 
+  </div>
+
+  <div class="modal-body">
+   
 
   </div>
 </ng-template>

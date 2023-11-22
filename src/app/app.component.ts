@@ -10,7 +10,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent implements OnInit{
   Table = 'table-form';
   @ViewChild('modalDettaglio') modalDettaglio!: ElementRef;
+  @ViewChild('modalInserimento') modalInserimento!: ElementRef;
   dettaglioUtente: any;
+ 
 
   utenti = [
     {
@@ -52,6 +54,10 @@ export class AppComponent implements OnInit{
   apriDettaglioUtente(user: any){
     this.dettaglioUtente = user;
     this.modalService.open(this.modalDettaglio, {size: 'lg'});
+  }
+  apriModaleInserimento(){
+    this.modalService.open(this.modalInserimento, {size: 'lg'});
+  
   }
 
 }
