@@ -20,7 +20,7 @@
   
   
   
-</table>
+</table> 
 
 <ng-template #modalDettaglio>
   <div>
@@ -31,8 +31,6 @@
     <ul>
       <li>
         <strong>Nome:</strong>  {{dettaglioUtente.nome}}
-         
-        
       </li>
       <li>
         <strong>Cognome:</strong> {{dettaglioUtente.cognome}}
@@ -60,11 +58,18 @@
   </div>
 
   <div class="modal-body">
-    <input type="text" placeholder="nome" formControlNome="nome" class="me-3"> 
-    <input type="text" placeholder="cognome" formControlNome="cognome" class="me-3"> 
-    <input type="text" placeholder="anni" formControlNome="anni" class="me-3"> 
-    <input type="text" placeholder="citta" formControlNome="citta" class="me-3"> 
-    <input type="text" placeholder="coloreCapelli" formControlNome="coloreCapelli" class="me-3"> 
-    <input type="text" placeholder="codicefiscale" formControlNome="codicefiscale" class="me-3"> 
+    <form [formGroup]="formInserimento">
+
+      <input type="text" placeholder="nome" formControlName="nome" class="me-3"> 
+      <input type="text" placeholder="cognome" formControlName="cognome" class="me-3"> 
+      <input type="text" placeholder="anni" formControlName="anni" class="me-3"> 
+      <input type="text" placeholder="citta" formControlName="citta" class="me-3"> 
+      <input type="text" placeholder="coloreCapelli" formControlName="coloreCapelli" class="me-3"> 
+      <input type="text" placeholder="codicefiscale" formControlName="codicefiscale" class="me-3"> 
+    </form>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" (click)="SalvaDati()">salva dati</button>
   </div>
 </ng-template>

@@ -70,6 +70,23 @@ export class AppComponent implements OnInit{
   
   }
 
+  SalvaDati(){
+    console.log(this.formInserimento.value);
+    this.utenti.push(
+      {
+         nome: this.formInserimento.value.nome,
+         cognome:this.formInserimento.value.cognome,
+         anni: this.formInserimento.value.anni,
+         citta: this.formInserimento.value.citta,
+         coloreCapelli:this.formInserimento.value.coloreCapelli,
+         codicefiscale:this.formInserimento.value.codicefiscale,
+      }
+    )
+  }
+  
+
+
+
 }
 
 
