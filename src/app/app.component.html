@@ -31,6 +31,24 @@
     <ul>
       <li>
         <strong>Nome:</strong>  {{dettaglioUtente.nome}}
+         
+        
+      </li>
+      <li>
+        <strong>Cognome:</strong> {{dettaglioUtente.cognome}}
+      </li>
+      <li>
+        <strong>anni:</strong> {{dettaglioUtente.anni}}
+      </li>
+      <li>
+        <strong>citta:</strong> {{dettaglioUtente.citta}}
+      </li>
+      <li>
+        <strong>coloreCapelli:</strong> {{dettaglioUtente.coloreCapelli}}
+      
+      </li>
+      <li>
+        <strong>codicefiscale:</strong> {{dettaglioUtente.codicefiscale}}
       </li>
     </ul>
 
@@ -42,7 +60,11 @@
   </div>
 
   <div class="modal-body">
-   
-
+    <input type="text" placeholder="nome" formControlNome="nome" class="me-3"> 
+    <input type="text" placeholder="cognome" formControlNome="cognome" class="me-3"> 
+    <input type="text" placeholder="anni" formControlNome="anni" class="me-3"> 
+    <input type="text" placeholder="citta" formControlNome="citta" class="me-3"> 
+    <input type="text" placeholder="coloreCapelli" formControlNome="coloreCapelli" class="me-3"> 
+    <input type="text" placeholder="codicefiscale" formControlNome="codicefiscale" class="me-3"> 
   </div>
 </ng-template>
