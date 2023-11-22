@@ -1,0 +1,37 @@
+<h1 class="text-success">Table</h1>
+ 
+<h4 class="mt-5">Tabella Utenti</h4>
+<table>
+  <tr>
+    <th>NOME</th>
+    <th>COGNOME</th>
+    <th>ANNI</th>
+    <th>AZIONI</th>
+  </tr>
+<tr *ngFor="let ut of utenti">
+    <td>{{ut.nome}}</td>
+    <td>{{ut.cognome}}</td>
+    <td>{{ut.anni}}</td>
+    <td>
+      <button class="btn btn-success" (click)="apriDettaglioUtente(ut)">Vedi Dettaglio </button>
+    </td>
+  </tr>
+  
+  
+  
+</table>
+
+<ng-template #modalDettaglio>
+  <div>
+    <h5>DETTAGLIO UTENTE</h5>
+  </div>
+
+  <div class="modal-body">
+    <ul>
+      <li>
+        <strong>Nome:</strong>  {{dettaglioUtente.nome}}
+      </li>
+    </ul>
+
+  </div>
+</ng-template>
